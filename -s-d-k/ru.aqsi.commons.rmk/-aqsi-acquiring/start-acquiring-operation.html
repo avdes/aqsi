@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>startAcquiringOperation</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script src="https://unpkg.com/kotlin-playground@1"></script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>SDK</span>
+            </a>
+    </div>
+    <div>
+1.37.0-rc.1    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="SDK::ru.aqsi.commons.rmk/AqsiAcquiring/startAcquiringOperation/#android.content.Context#kotlin.Long?#kotlin.String#kotlin.Long?#kotlin.Int?#kotlin.String?#ru.aqsi.commons.receivers.AqsiDataResultReceiver.AqsiCallback[ru.aqsi.commons.models.AcquiringData]/PointingToDeclaration//1757799368">
+  <div class="breadcrumbs"><a href="../../../index.html">SDK</a><span class="delimiter">/</span><a href="../index.html">ru.aqsi.commons.rmk</a><span class="delimiter">/</span><a href="index.html">AqsiAcquiring</a><span class="delimiter">/</span><span class="current">startAcquiringOperation</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>start</span><wbr></wbr><span>Acquiring</span><wbr></wbr><span><span>Operation</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-acquiring-operation.html"><span class="token function">startAcquiringOperation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">price<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">transactionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Transaction.PURCHASE.value<span class="token punctuation">, </span></span><span class="parameter ">rrn<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">transactionID<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">resultReceiverCallback<span class="token operator">: </span><a href="../../ru.aqsi.commons.receivers/-aqsi-data-result-receiver/-aqsi-callback/index.html">AqsiDataResultReceiver.AqsiCallback</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../ru.aqsi.commons.models/-acquiring-data/index.html">AcquiringData</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><p class="paragraph">Совершить эквайринговую операцию. Универсальный метод, подходит для любого типа эквайринга на кассе (встроенный эквайринг, Сбербанк upos, пинпад 2can). Для работы с Эквайринговым ядром Сбербанка (upos) рекомендуется использовать методы для прямой интеграции. Вопросы прямой интеграции с ПО Сбербанка нужно обсуждать напрямую с представителями Сбербанка.</p><p class="paragraph">Примечание: Сбербанк не поддерживает операцию <a href="../../ru.aqsi.commons.rmk.enums/-transaction/-v-o-i-d/index.html">Transaction.VOID</a></p><h4 class="">Samples</h4><div class="sample-container"><pre><code class="runnablesample monospace block lang-kotlin" theme="idea">import android.content.Context
+import android.graphics.Bitmap
+import android.util.Log
+import android.widget.Toast
+import com.google.gson.Gson
+import com.google.gson.internal.bind.util.ISO8601Utils
+import ru.aqsi.commons.getWarningList
+import ru.aqsi.commons.market.AqsiMarket
+import ru.aqsi.commons.models.*
+import ru.aqsi.commons.models.printingModels.*
+import ru.aqsi.commons.models.shifts.Reconciliation
+import ru.aqsi.commons.receivers.*
+import ru.aqsi.commons.rmk.AqsiAcquiring
+import ru.aqsi.commons.rmk.AqsiRMK
+import ru.aqsi.commons.rmk.enums.*
+import ru.aqsi.commons.rmk.getActiveCashier
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
+import java.util.*
+import kotlin.collections.ArrayList
+fun main() { 
+   //sampleStart 
+   AqsiAcquiring.startAcquiringOperation(
+    context, 100,
+    resultReceiverCallback = object : AqsiDataResultReceiver.AqsiCallback&lt;AcquiringData&gt; {
+        override fun onSuccess(
+            result: AcquiringData?,
+            errorList: ArrayList&lt;Throwable&gt;?
+        ) {
+            successOperation(context, result, errorList)
+        }
+
+        override fun onError(exception: Exception?) {
+            errorOperation(context, exception)
+        }
+    }
+) 
+   //sampleEnd
+}</code></pre></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>context</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">контекст вызова метода</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>price</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">сумма транзакции в копейках. К примеру, 35 рублей нужно передать как 3500. Обязательное поле.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>transaction</span><wbr></wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">тип операции. Можно воспользоваться справочником <a href="../../ru.aqsi.commons.rmk.enums/-transaction/index.html">ru.aqsi.commons.rmk.enums.Transaction</a>.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>rrn</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">retrieval refernce number. Обязательый параметр для проведения операции refund.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>number</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">номер чека. Обязательный параметр для проведения операции void</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>result</span><wbr></wbr><span>Receiver</span><wbr></wbr><span><span>Callback</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">callback. Возвращает ответ Эквайрингового ядра в виде <a href="../../ru.aqsi.commons.models/-acquiring-data/index.html">AcquiringData</a></p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>transaction</span><wbr></wbr><span><span>ID</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">ID транзакции в банке, поле необходимо для проведения возврата при использовании 2Can эквайринга</p></div></div></div></div></div></div></div><hr><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-acquiring-operation.html"><span class="token function"><strike>startAcquiringOperation</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">price<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">transactionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Transaction.PURCHASE.value<span class="token punctuation">, </span></span><span class="parameter ">rrn<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">resultReceiverCallback<span class="token operator">: </span><a href="../../ru.aqsi.commons.receivers/-aqsi-result-receiver/-result-receiver-call-back/index.html">AqsiResultReceiver.ResultReceiverCallBack</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Новый метод возвращяет в качестве результата AcquiringData, а также позволяет использовать любой эквайринг подключенный к кассе</p><h4 class="">Replace with</h4><div class="sample-container"><pre><code class="monospace block lang-kotlin" theme="idea">startAcquiring</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><p class="paragraph">Совершить эквайринговую операцию (встроенный эквайринг aQsi)</p><h4 class="">Samples</h4><div class="sample-container"><pre><code class="runnablesample monospace block lang-kotlin" theme="idea">import android.content.Context
+import android.graphics.Bitmap
+import android.util.Log
+import android.widget.Toast
+import com.google.gson.Gson
+import com.google.gson.internal.bind.util.ISO8601Utils
+import ru.aqsi.commons.getWarningList
+import ru.aqsi.commons.market.AqsiMarket
+import ru.aqsi.commons.models.*
+import ru.aqsi.commons.models.printingModels.*
+import ru.aqsi.commons.models.shifts.Reconciliation
+import ru.aqsi.commons.receivers.*
+import ru.aqsi.commons.rmk.AqsiAcquiring
+import ru.aqsi.commons.rmk.AqsiRMK
+import ru.aqsi.commons.rmk.enums.*
+import ru.aqsi.commons.rmk.getActiveCashier
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
+import java.util.*
+import kotlin.collections.ArrayList
+fun main() { 
+   //sampleStart 
+   AqsiAcquiring.startAcquiringOperation(
+    context = context,
+    price = 100,
+    transactionType = Transaction.VOID.value,
+    number = 388,
+    resultReceiverCallback = object : AqsiResultReceiver.ResultReceiverCallBack {
+        override fun onSuccess(data: String?) {
+            Log.e(&quot;AqsiRMKSamples&quot;, &quot;startAcquiringOperation onSuccess: $data&quot;)
+            Toast.makeText(
+                context,
+                &quot;Эквайринговая операция проведена успешно: $data&quot;,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
+        override fun onError(exception: Exception?) {
+            Log.e(
+                &quot;AqsiRMKSamples&quot;,
+                &quot;startAcquiringOperation onError: ${exception?.message}&quot;
+            )
+            Toast.makeText(
+                context,
+                &quot;Ошибка при проведении эквайринговой операции: ${exception?.message}&quot;,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+) 
+   //sampleEnd
+}</code></pre></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>context</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">контекст вызова метода</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>price</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">сумма транзакции в копейках. К примеру, 35 рублей нужно передать как 3500. Обязательное поле.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>transaction</span><wbr></wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">тип операции. Можно воспользоваться справочником <a href="../../ru.aqsi.commons.rmk.enums/-transaction/index.html">ru.aqsi.commons.rmk.enums.Transaction</a>.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>rrn</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">retrieval refernce number. Обязательый параметр для проведения операции refund.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>number</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">номер чека. Обязательный параметр для проведения операции void</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>result</span><wbr></wbr><span>Receiver</span><wbr></wbr><span><span>Callback</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">callback. Возвращает ответ Эквайрингового ядра в xml  в виде String. Актуальная документация по формату ответа отсутствует. Есть устаревшая</p></div></div></div></div></div></div></div><hr><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-acquiring-operation.html"><span class="token function"><strike>startAcquiringOperation</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">price<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">transactionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Transaction.PURCHASE.value<span class="token punctuation">, </span></span><span class="parameter ">rrn<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">resultReceiverCallback<span class="token operator">: </span><a href="../../ru.aqsi.commons.receivers/-aqsi-result-receiver/-result-receiver-call-back/index.html">AqsiResultReceiver.ResultReceiverCallBack</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">enablePowerButtonOnExit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">jpayPaymentMode<span class="token operator">: </span><a href="../../ru.aqsi.commons.rmk.enums/-jpay-payment-mode/index.html">JpayPaymentMode</a><span class="token operator">?</span><span class="token operator"> = </span>JpayPaymentMode.BASIC_MODE</span></span><span class="token punctuation">)</span></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Новый метод возвращяет в качестве результата AcquiringData, а также позволяет использовать любой эквайринг подключенный к кассе</p><h4 class="">Replace with</h4><div class="sample-container"><pre><code class="monospace block lang-kotlin" theme="idea">startAcquiring</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><h4 class="">See also</h4><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="start-acquiring-operation.html"><span>Aqsi</span><wbr></wbr><span>Acquiring.</span><wbr></wbr><span>start</span><wbr></wbr><span>Acquiring</span><wbr></wbr><span><span>Operation</span></span></a></div></span></div><div></div></div></div></div></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>enable</span><wbr></wbr><span>Power</span><wbr></wbr><span>Button</span><wbr></wbr><span>On</span><wbr></wbr><span><span>Exit</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">если значение false, то по выходу из эквайринговой операции кнопка HOME будет оставатся заблокированной</p></div></div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Консультации по использованию библиотеки <b>api@aqsi.ru</b></span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

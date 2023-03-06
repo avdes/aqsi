@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>processChequeRefund</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script src="https://unpkg.com/kotlin-playground@1"></script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>SDK</span>
+            </a>
+    </div>
+    <div>
+1.37.0-rc.1    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="SDK::ru.aqsi.commons.rmk/AqsiRMK/processChequeRefund/#android.content.Context#java.util.ArrayList[ru.aqsi.commons.models.ChequePosition]#ru.aqsi.commons.receivers.AqsiResultReceiver.ResultReceiverCallBack?#kotlin.Int#kotlin.Int?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.String?/PointingToDeclaration//1757799368">
+  <div class="breadcrumbs"><a href="../../../index.html">SDK</a><span class="delimiter">/</span><a href="../index.html">ru.aqsi.commons.rmk</a><span class="delimiter">/</span><a href="index.html">AqsiRMK</a><span class="delimiter">/</span><span class="current">processChequeRefund</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>process</span><wbr></wbr><span>Cheque</span><wbr></wbr><span><span>Refund</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="process-cheque-refund.html"><span class="token function"><strike>processChequeRefund</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">chequePositions<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html">ArrayList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../ru.aqsi.commons.models/-cheque-position/index.html">ChequePosition</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">resultReceiverCallback<span class="token operator">: </span><a href="../../ru.aqsi.commons.receivers/-aqsi-result-receiver/-result-receiver-call-back/index.html">AqsiResultReceiver.ResultReceiverCallBack</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">chequeType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ChequeType.INPUT.id<span class="token punctuation">, </span></span><span class="parameter ">paymentMethod<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">stringBefore<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">qrCodeStringBefore<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">stringAfter<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">qrCodeStringAfter<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">clientContactForElectroReceipt<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Use AqsiRMK.processCheque()</p></div><p class="paragraph">Пробить чек возврата с помощью кассы Акси. Товары передаются в виде массива <a href="../../ru.aqsi.commons.models/-cheque-position/index.html">моделей товара</a>. Это более простой метод, который просто печатает чек возврата, без перекидывания в графический интерфейс aQsi РМК. В этом случае всю логику проведения возврата, например, осуществление возврата по банковской карте, следует реализовать на стороне вашего приложения. Обратите внимание на более простой метод, где логика возврата реалзована на стороне приложения РМК: <a href="process-cheque-refund.html">processChequeRefund</a> Метод может работать некорректно при использовании Proguard.</p><h4 class="">Samples</h4><div class="sample-container"><pre><code class="runnablesample monospace block lang-kotlin" theme="idea">import android.content.Context
+import android.graphics.Bitmap
+import android.util.Log
+import android.widget.Toast
+import com.google.gson.Gson
+import com.google.gson.internal.bind.util.ISO8601Utils
+import ru.aqsi.commons.getWarningList
+import ru.aqsi.commons.market.AqsiMarket
+import ru.aqsi.commons.models.*
+import ru.aqsi.commons.models.printingModels.*
+import ru.aqsi.commons.models.shifts.Reconciliation
+import ru.aqsi.commons.receivers.*
+import ru.aqsi.commons.rmk.AqsiAcquiring
+import ru.aqsi.commons.rmk.AqsiRMK
+import ru.aqsi.commons.rmk.enums.*
+import ru.aqsi.commons.rmk.getActiveCashier
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
+import java.util.*
+import kotlin.collections.ArrayList
+fun main() { 
+   //sampleStart 
+   val products = arrayListOf(
+    ChequePosition(
+        quantity = 1.0,
+        priceBrutto = 100.0,
+        price = 100.0,
+        text = &quot;Тестовый т&quot;,
+        tax = TaxType.TAX_20.id,
+        paymentMethodType = PaymentType.FULL_PAYMENT.id,
+        paymentSubjectType = BargainSubject.GOODS.id,
+        unitCode = QuantityUnit.M3.id,
+        itemCode = &quot;010046209849000021\&quot;O&amp;_u5X 8005017500 93dGVz&quot;,
+        nomenclatureCode = &quot;RE0Aa5c3YpAiTyZfdTVY&quot;
+    )
+)
+
+AqsiRMK.processChequeRefund(
+    context, products,
+    object : AqsiResultReceiver.ResultReceiverCallBack {
+        override fun onSuccess(data: String?) {
+            Log.e(&quot;AqsiRMKSamples&quot;, &quot;onSuccess: $data&quot;)
+            Toast.makeText(context, &quot;Чек возврата напечатан успешно&quot;, Toast.LENGTH_LONG)
+                .show()
+        }
+
+        override fun onError(exception: Exception?) {
+            Log.e(&quot;AqsiRMKSamples&quot;, &quot;onError: ${exception?.message}&quot;)
+            Toast.makeText(
+                context,
+                &quot;Ошибка при печати чека возврата: ${exception?.message}&quot;,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    },
+    ChequeType.REFUND.id,
+    PaymentMethod.CASH.id,
+    &quot;before&quot;,
+    &quot;qr_before&quot;,
+    &quot;after&quot;,
+    &quot;qr_after&quot;
+) 
+   //sampleEnd
+}</code></pre></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>context</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">контекст вызова метода</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>cheque</span><wbr></wbr><span><span>Positions</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">массив <a href="../../ru.aqsi.commons.models/-cheque-position/index.html">товаров</a>, на которые необходимо пробить чек возврата</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>result</span><wbr></wbr><span>Receiver</span><wbr></wbr><span><span>Callback</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">В случае оплаты по карте возвращает ответ эквайрингового ядра в XML. Описание параметров XML необходимо запросить дополнительно либо, по возможности, понять на основе названий тэгов</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>cheque</span><wbr></wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">тип чека. Можно воспользоваться справочником <a href="../../ru.aqsi.commons.rmk.enums/-cheque-type/index.html">ru.aqsi.commons.rmk.enums.ChequeType</a>. В данном случае принимается только Возврат прихода или Возврат расхода</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>payment</span><wbr></wbr><span><span>Method</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">тип оплаты. 0 - наличные, 1 - электронными. Можно воспользоваться справочником <a href="../../ru.aqsi.commons.rmk.enums/-payment-method/index.html">ru.aqsi.commons.rmk.enums.PaymentMethod</a>.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>string</span><wbr></wbr><span><span>Before</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">строка, которая будет напечатана перед чеком</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>qr</span><wbr></wbr><span>Code</span><wbr></wbr><span>String</span><wbr></wbr><span><span>Before</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">qr-код, штрих-код, который будет напечатан перед чеком <a href="../../ru.aqsi.commons.models.printingModels/-qr-shtrih-code-printing-model/index.html">QrShtrihCodePrintingModel</a></p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>string</span><wbr></wbr><span><span>After</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">строка, которая будет напечатана после чека</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>qr</span><wbr></wbr><span>Code</span><wbr></wbr><span>String</span><wbr></wbr><span><span>After</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">qr-код, штрих-код, который будет напечатан после чека <a href="../../ru.aqsi.commons.models.printingModels/-qr-shtrih-code-printing-model/index.html">QrShtrihCodePrintingModel</a></p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>client</span><wbr></wbr><span>Contact</span><wbr></wbr><span>For</span><wbr></wbr><span>Electro</span><wbr></wbr><span><span>Receipt</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">контакт клиента. Емайл или телефон клиента, используется для электронного чека.</p><p class="paragraph">Должен соответствовать формату указанному в <a href="http://www.consultant.ru/cons/cgi/online.cgi?req=doc&amp;base=LAW&amp;n=341652&amp;dst=655&amp;date=19.06.2020">ФФД</a> (+{Ц} или {С}@{С}), тэг 1008</p></div></div></div></div></div></div></div><hr><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="process-cheque-refund.html"><span class="token function"><strike>processChequeRefund</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">cheque<span class="token operator">: </span><a href="../../ru.aqsi.commons.models/-cheque/index.html">Cheque</a><span class="token punctuation">, </span></span><span class="parameter ">cashierName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">resultReceiverCallback<span class="token operator">: </span><a href="../../ru.aqsi.commons.receivers/-aqsi-result-receiver/-result-receiver-call-back/index.html">AqsiResultReceiver.ResultReceiverCallBack</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">chequeType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ChequeType.REFUND.id<span class="token punctuation">, </span></span><span class="parameter ">stringBefore<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">qrCodeStringBefore<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">stringAfter<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">qrCodeStringAfter<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Use processChequeRefundById(context, id, cashierName, callback, printingListBefore, printingListAfter)</p></div><p class="paragraph">Пробить чек возврата на чек прихода (расхода) с помощью кассы Акси. Важно - на вход принимается именно чек прихода или расхода. На все либо некоторые позиции из него будет сформирован чек возврата. В этом случае всю логику про проведению возврата (например, эквайринговый возврат) берёт на себя приложение РМК. Метод может работать некорректно при использовании Proguard.</p><h4 class="">Samples</h4><div class="sample-container"><pre><code class="runnablesample monospace block lang-kotlin" theme="idea">import android.content.Context
+import android.graphics.Bitmap
+import android.util.Log
+import android.widget.Toast
+import com.google.gson.Gson
+import com.google.gson.internal.bind.util.ISO8601Utils
+import ru.aqsi.commons.getWarningList
+import ru.aqsi.commons.market.AqsiMarket
+import ru.aqsi.commons.models.*
+import ru.aqsi.commons.models.printingModels.*
+import ru.aqsi.commons.models.shifts.Reconciliation
+import ru.aqsi.commons.receivers.*
+import ru.aqsi.commons.rmk.AqsiAcquiring
+import ru.aqsi.commons.rmk.AqsiRMK
+import ru.aqsi.commons.rmk.enums.*
+import ru.aqsi.commons.rmk.getActiveCashier
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
+import java.util.*
+import kotlin.collections.ArrayList
+fun main() { 
+   //sampleStart 
+   val processedAt = Date()
+AqsiRMK.processChequeRefund(
+    context = context,
+    cheque = Cheque(
+        content = ChequeContent(
+            checkClose = ChequeClose(
+                taxationSystem = TaxSystem.USN_DOHOD.id,
+                payments = ArrayList&lt;Payment&gt;().apply {
+                    add(
+                        Payment(
+                            PaymentMethod.CASH.id, 8.24,
+                            acquiringData = AcquiringData(
+                                acquirerBankName = &quot;Банк Трёхлитровый&quot;,
+                                acquirerAgentName = &quot;Посредник&quot;,
+                                cashlessType = CashlessType.CASHLESS.id,
+                                transactionID = &quot;1&quot;,
+                                slipNumber = &quot;1&quot;,
+                                approvalCode = &quot;0&quot;,
+                                terminalId = &quot;121&quot;,
+                                maskPan = &quot;1234&quot;,
+                                AID = &quot;&quot;,
+                                TVR = &quot;tvr&quot;,
+                                APN = &quot;111111&quot;,
+                                IIN = &quot;1234567890&quot;,
+                                ignNeeded = false,
+                                amount = 8.24
+                            )
+                        )
+                    )
+                }
+            ),
+            positions = ArrayList&lt;ChequePosition&gt;().apply {
+                add(
+                    ChequePosition(
+                        quantity = 1.237,
+                        priceBrutto = 6.66,
+                        price = 6.66,
+                        text = &quot;Тестовый тovar&quot;,
+                        tax = TaxType.TAX_20.id,
+                        unitCode = QuantityUnit.MBYTE.id,
+                        paymentMethodType = PaymentType.FULL_PAYMENT.id,
+                        paymentSubjectType = BargainSubject.GOODS.id,
+                        itemCode = &quot;010046209849000021\&quot;O&amp;_u5X 8005017500 93dGVz&quot;,
+                        nomenclatureCode = &quot;RE0Aa5c3YpAiTyZfdTVY&quot;
+                    )
+                )
+            }
+        ),
+        amount = 8.24,
+        fp = &quot;123456&quot;,
+        documentNumber = 2,
+        fsNumber = &quot;123456&quot;,
+        shiftNumber = &quot;1&quot;,
+        documentIndex = 1,
+        operationNumber = 3,
+        processedAt = processedAt,
+        fiscalizedAt = processedAt,
+        cashierId = Cashier(&quot;Кассир&quot;, inn = &quot;0000000001&quot;).id
+            ?: error(&quot;id кассира не может быть пустым&quot;),
+        ignoreItemCodeCheck = false,
+    ),
+    cashierName = &quot;Кассир Валера&quot;,
+    resultReceiverCallback = object : AqsiResultReceiver.ResultReceiverCallBack {
+        override fun onSuccess(data: String?) {
+            Log.e(&quot;AqsiRMKSamples&quot;, &quot;onSuccess: $data&quot;)
+            Toast.makeText(context, &quot;Чек возврата напечатан успешно&quot;, Toast.LENGTH_LONG)
+                .show()
+        }
+
+        override fun onError(exception: Exception?) {
+            Log.e(&quot;AqsiRMKSamples&quot;, &quot;onError: ${exception?.message}&quot;)
+            Toast.makeText(
+                context,
+                &quot;Ошибка при печати чека возврата: ${exception?.message}&quot;,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    },
+    chequeType = ChequeType.INPUT.id,
+    stringBefore = &quot;qrBefore&quot;,
+    qrCodeStringBefore = &quot;stringBefore&quot;,
+    stringAfter = &quot;qrAfter&quot;,
+    qrCodeStringAfter = &quot;stringAfter&quot;
+) 
+   //sampleEnd
+}</code></pre></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>context</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">контекст вызова метода</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>cheque</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">объект чека, содержащий информацию о чеке, возврат которого необходимо оформить</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>cashier</span><wbr></wbr><span><span>Name</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">имя кассира</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>result</span><wbr></wbr><span>Receiver</span><wbr></wbr><span><span>Callback</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">callback.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>cheque</span><wbr></wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">тип чека. Можно воспользоваться справочником <a href="../../ru.aqsi.commons.rmk.enums/-cheque-type/index.html">ru.aqsi.commons.rmk.enums.ChequeType</a>. В данном случае принимается только Возврат прихода или Возврат расхода</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>string</span><wbr></wbr><span><span>Before</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">строка, которая будет напечатана перед чеком</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>qr</span><wbr></wbr><span>Shtrih</span><wbr></wbr><span>Code</span><wbr></wbr><span><span>Before</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">qr-код, штрих-код, который будет напечатан перед чеком <a href="../../ru.aqsi.commons.models.printingModels/-qr-shtrih-code-printing-model/index.html">QrShtrihCodePrintingModel</a></p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>string</span><wbr></wbr><span><span>After</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">строка, которая будет напечатана после чека</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>qr</span><wbr></wbr><span>Shtrih</span><wbr></wbr><span>Code</span><wbr></wbr><span><span>After</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">qr-код, штрих-код, который будет напечатан после чека <a href="../../ru.aqsi.commons.models.printingModels/-qr-shtrih-code-printing-model/index.html">QrShtrihCodePrintingModel</a></p></div></div></div></div></div></div></div><hr><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="process-cheque-refund.html"><span class="token function"><strike>processChequeRefund</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">cheque<span class="token operator">: </span><a href="../../ru.aqsi.commons.models/-cheque/index.html">Cheque</a><span class="token punctuation">, </span></span><span class="parameter ">cashierName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">aqsiResultReceiverCallback<span class="token operator">: </span><a href="../../ru.aqsi.commons.receivers/-aqsi-result-receiver/-result-receiver-call-back/index.html">AqsiResultReceiver.ResultReceiverCallBack</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">chequeType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ChequeType.REFUND.id<span class="token punctuation">, </span></span><span class="parameter ">printingListBefore<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html">ArrayList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../ru.aqsi.commons.models.printingModels/-base-printing-model/index.html">BasePrintingModel</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">printingListAfter<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html">ArrayList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../ru.aqsi.commons.models.printingModels/-base-printing-model/index.html">BasePrintingModel</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">clientName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">clientInn<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Use processChequeRefundById(context, id, cashierName, callback, printingListBefore, printingListAfter)</p></div><p class="paragraph">Пробить чек возврата на чек прихода (расхода) с помощью кассы Акси. Важно - на вход принимается именно чек прихода или расхода. На все либо некоторые позиции из него будет сформирован чек возврата. В этом случае всю логику про проведению возврата (например, эквайринговый возврат) берёт на себя приложение РМК. Для проведения возврата чека, оплаченного раздельной оплатой, используйте метод <a href="process-cheque-refund-by-id.html">processChequeRefundById</a> Метод может работать некорректно при использовании Proguard.</p><h4 class="">Samples</h4><div class="sample-container"><pre><code class="runnablesample monospace block lang-kotlin" theme="idea">import android.content.Context
+import android.graphics.Bitmap
+import android.util.Log
+import android.widget.Toast
+import com.google.gson.Gson
+import com.google.gson.internal.bind.util.ISO8601Utils
+import ru.aqsi.commons.getWarningList
+import ru.aqsi.commons.market.AqsiMarket
+import ru.aqsi.commons.models.*
+import ru.aqsi.commons.models.printingModels.*
+import ru.aqsi.commons.models.shifts.Reconciliation
+import ru.aqsi.commons.receivers.*
+import ru.aqsi.commons.rmk.AqsiAcquiring
+import ru.aqsi.commons.rmk.AqsiRMK
+import ru.aqsi.commons.rmk.enums.*
+import ru.aqsi.commons.rmk.getActiveCashier
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
+import java.util.*
+import kotlin.collections.ArrayList
+fun main() { 
+   //sampleStart 
+   val processedAt = Date()
+AqsiRMK.processChequeRefund(
+    context,
+    Cheque(
+        content = ChequeContent(
+            checkClose = ChequeClose(
+                taxationSystem = TaxSystem.USN_DOHOD.id,
+                payments = ArrayList&lt;Payment&gt;().apply {
+                    add(
+                        Payment(
+                            type = PaymentMethod.CASH.id,
+                            amount = 8.24,
+                            acquiringData = AcquiringData(
+                                acquirerBankName = &quot;Банк Трёхлитровый&quot;,
+                                acquirerAgentName = &quot;Посредник&quot;,
+                                cashlessType = CashlessType.CASHLESS.id,
+                                transactionID = &quot;1&quot;,
+                                slipNumber = &quot;1&quot;,
+                                approvalCode = &quot;0&quot;,
+                                terminalId = &quot;121&quot;,
+                                maskPan = &quot;1234&quot;,
+                                AID = &quot;&quot;,
+                                TVR = &quot;tvr&quot;,
+                                APN = &quot;111111&quot;,
+                                IIN = &quot;1234567890&quot;,
+                                ignNeeded = false,
+                                amount = 8.24
+                            )
+                        )
+                    )
+                }
+            ),
+            positions = ArrayList&lt;ChequePosition&gt;().apply {
+                add(
+                    ChequePosition(
+                        quantity = 1.237,
+                        priceBrutto = 6.66,
+                        price = 6.66,
+                        text = &quot;Тестовый тovar&quot;,
+                        tax = TaxType.TAX_20.id,
+                        paymentMethodType = PaymentType.FULL_PAYMENT.id,
+                        paymentSubjectType = BargainSubject.GOODS.id,
+                        unitCode = QuantityUnit.TBYTE.id,
+                        itemCode = &quot;010046209849000021\&quot;O&amp;_u5X 8005017500 93dGVz&quot;,
+                        nomenclatureCode = &quot;RE0Aa5c3YpAiTyZfdTVY&quot;
+                    )
+                )
+            }
+        ),
+        amount = 8.24,
+        fp = &quot;123456&quot;,
+        documentNumber = 2,
+        fsNumber = &quot;123456&quot;,
+        shiftNumber = &quot;1&quot;,
+        documentIndex = 1,
+        operationNumber = 3,
+        processedAt = processedAt,
+        fiscalizedAt = processedAt,
+        cashierId = context.getActiveCashier()?.id ?: error(&quot;id кассира не может быть пустым&quot;),
+        ignoreItemCodeCheck = false,
+        ),
+    &quot;Кассир Валера&quot;,
+    aqsiResultReceiverCallback = object : AqsiResultReceiver.ResultReceiverCallBack {
+        override fun onSuccess(data: String?) {
+            Log.e(&quot;AqsiRMKSamples&quot;, &quot;onSuccess: $data&quot;)
+            Toast.makeText(context, &quot;Чек возврата напечатан успешно&quot;, Toast.LENGTH_LONG)
+                .show()
+        }
+
+        override fun onError(exception: Exception?) {
+            Log.e(&quot;AqsiRMKSamples&quot;, &quot;onError: ${exception?.message}&quot;)
+            Toast.makeText(
+                context,
+                &quot;Ошибка при печати чека возврата: ${exception?.message}&quot;,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+) 
+   //sampleEnd
+}</code></pre></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>context</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">контекст вызова метода</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>cheque</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">объект чека, содержащий информацию о чеке, возврат которого необходимо оформить. Чек не может содержать массив платежей для раздельной оплаты.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>cashier</span><wbr></wbr><span><span>Name</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">имя кассира</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>aqsi</span><wbr></wbr><span>Result</span><wbr></wbr><span>Receiver</span><wbr></wbr><span><span>Callback</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">callback.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>cheque</span><wbr></wbr><span><span>Type</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">тип чека. Можно воспользоваться справочником <a href="../../ru.aqsi.commons.rmk.enums/-cheque-type/index.html">ru.aqsi.commons.rmk.enums.ChequeType</a>. В данном случае принимается только Возврат прихода или Возврат расхода</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>printing</span><wbr></wbr><span>List</span><wbr></wbr><span><span>Before</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">массив объектов нефискальной печати, которые будут напечатаны перед чеком,  массив объектов для печати представлен в <a href="../../ru.aqsi.commons.models.printingModels/-base-printing-model/index.html">ru.aqsi.commons.models.printingModels.BasePrintingModel</a></p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>printing</span><wbr></wbr><span>List</span><wbr></wbr><span><span>After</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">массив объектов нефискальной печати, которые будут напечатаны после чека, ,  массив объектов для печати представлен в <a href="../../ru.aqsi.commons.models.printingModels/-base-printing-model/index.html">ru.aqsi.commons.models.printingModels.BasePrintingModel</a></p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>client</span><wbr></wbr><span><span>Name</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">получатель, тэг 1227</p></div></div></div></div></div><div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>client</span><wbr></wbr><span><span>Inn</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">инн получателя, тэг 1228</p></div></div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Консультации по использованию библиотеки <b>api@aqsi.ru</b></span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

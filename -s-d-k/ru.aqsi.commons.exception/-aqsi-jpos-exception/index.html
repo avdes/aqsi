@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AqsiJposException</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>SDK</span>
+            </a>
+    </div>
+    <div>
+1.37.0-rc.1    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="SDK::ru.aqsi.commons.exception/AqsiJposException///PointingToDeclaration//1757799368">
+  <div class="breadcrumbs"><a href="../../../index.html">SDK</a><span class="delimiter">/</span><a href="../index.html">ru.aqsi.commons.exception</a><span class="delimiter">/</span><span class="current">AqsiJposException</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Aqsi</span><wbr></wbr><span>Jpos</span><wbr></wbr><span><span>Exception</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AqsiJposException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../-aqsi-exception/index.html">AqsiException</a></div><p class="paragraph">Исключение может возникнуть при взаимодействии с кассовым ядром Коды ошибкок которые могут возникнуть <code class="lang-kotlin">{0, &quot;Ошибок нет&quot;}</code>, <code class="lang-kotlin">{1, &quot;Неизвестная команда, неверный формат посылки или неизвестные параметры&quot;}</code>, <code class="lang-kotlin">{2, &quot;Неверное состояние ФН&quot;}</code>, <code class="lang-kotlin">{3, &quot;Ошибка ФН&quot;}</code>, <code class="lang-kotlin">{4, &quot;Ошибка КС&quot;}</code>, <code class="lang-kotlin">{5, &quot;Закончен срок эксплуатации ФН&quot;}</code>, <code class="lang-kotlin">{6, &quot;Архив ФН переполнен&quot;}</code>, <code class="lang-kotlin">{7, &quot;Неверные дата и/или время&quot;}</code>, <code class="lang-kotlin">{8, &quot;Нет запрошенных данных&quot;}</code>, <code class="lang-kotlin">{9, &quot;Некорректное значение параметров команды&quot;}</code>, <code class="lang-kotlin">{16, &quot;Превышение размеров TLV данных&quot;}</code>, <code class="lang-kotlin">{17, &quot;Нет транспортного соединения&quot;}</code>, <code class="lang-kotlin">{18, &quot;Исчерпан ресурс КС&quot;}</code>, <code class="lang-kotlin">{20, &quot;Исчерпан ресурс хранения&quot;}</code>, <code class="lang-kotlin">{21, &quot;Исчерпан ресурс Ожидания передачи сообщения&quot;}</code>, <code class="lang-kotlin">{22, &quot;Продолжительность смены более 24 часов&quot;}</code>, <code class="lang-kotlin">{23, &quot;Неверная разница во времени между 2 операциями&quot;}</code>, <code class="lang-kotlin">{32, &quot;Сообщение от ОФД не может быть принято&quot;}</code>, <code class="lang-kotlin">{47, &quot;Таймаут обмена с ФН&quot;}</code>, <code class="lang-kotlin">{48, &quot;ФН не отвечает&quot;}</code>, <code class="lang-kotlin">{51, &quot;Некорректные параметры в команде&quot;}</code>, <code class="lang-kotlin">{52, &quot;Нет данных&quot;}</code>, <code class="lang-kotlin">{53, &quot;Некорректный параметр при данных настройках&quot;}</code>, <code class="lang-kotlin">{54, &quot;Некорректные параметры в команде для данной реализации ККТ&quot;}</code>, <code class="lang-kotlin">{55, &quot;Команда не поддерживается в данной реализации ККТ&quot;}</code>, <code class="lang-kotlin">{56, &quot;Ошибка в ПЗУ&quot;}</code>, <code class="lang-kotlin">{57, &quot;Внутренняя ошибка ПО ККТ&quot;}</code>, <code class="lang-kotlin">{58, &quot;Переполнение накопления по надбавкам в смене&quot;}</code>, <code class="lang-kotlin">{59, &quot;Переполнение накопления в смене&quot;}</code>, <code class="lang-kotlin">{60, &quot;Смена открыта операция невозможна&quot;}</code>, <code class="lang-kotlin">{61, &quot;Смена открыта операция невозможна&quot;}</code>, <code class="lang-kotlin">{62, &quot;Переполнение накопления по секциям в смене&quot;}</code>, <code class="lang-kotlin">{63, &quot;Переполнение накопления по скидкам в смене&quot;}</code>, <code class="lang-kotlin">{64, &quot;Переполнение диапазона скидок&quot;}</code>, <code class="lang-kotlin">{65, &quot;Переполнение диапазона оплаты наличными&quot;}</code>, <code class="lang-kotlin">{66, &quot;Переполнение диапазона оплаты типом 2&quot;}</code>, <code class="lang-kotlin">{67, &quot;Переполнение диапазона оплаты типом 3&quot;}</code>, <code class="lang-kotlin">{68, &quot;Переполнение диапазона оплаты типом 4&quot;}</code>, <code class="lang-kotlin">{69, &quot;Cумма всех типов оплаты меньше итога чека&quot;}</code>, <code class="lang-kotlin">{70, &quot;Не хватает наличности в кассе&quot;}</code>, <code class="lang-kotlin">{71, &quot;Переполнение накопления по налогам в смене&quot;}</code>, <code class="lang-kotlin">{72, &quot;Переполнение итога чека&quot;}</code>, <code class="lang-kotlin">{73, &quot;Операция невозможна в открытом чеке данного типа&quot;}</code>, <code class="lang-kotlin">{74, &quot;Открыт чек – операция невозможна&quot;}</code>, <code class="lang-kotlin">{75, &quot;Буфер чека переполнен&quot;}</code>, <code class="lang-kotlin">{76, &quot;Переполнение накопления по обороту налогов в смене&quot;}</code>, <code class="lang-kotlin">{77, &quot;Вносимая безналичной оплатой сумма больше суммы чека&quot;}</code>, <code class="lang-kotlin">{78, &quot;Смена превысила 24 часа&quot;}</code>, <code class="lang-kotlin">{79, &quot;Неверный пароль&quot;}</code>, <code class="lang-kotlin">{80, &quot;Идет печать результатов выполнения предыдущей команды&quot;}</code>, <code class="lang-kotlin">{81, &quot;Переполнение накоплений наличными в смене&quot;}</code>, <code class="lang-kotlin">{82, &quot;Переполнение накоплений по типу оплаты 2 в смене&quot;}</code>, <code class="lang-kotlin">{83, &quot;Переполнение накоплений по типу оплаты 3 в смене&quot;}</code>, <code class="lang-kotlin">{84, &quot;Переполнение накоплений по типу оплаты 4 в смене&quot;}</code>, <code class="lang-kotlin">{85, &quot;Чек закрыт – операция невозможна&quot;}</code>, <code class="lang-kotlin">{86, &quot;Нет документа для повтора&quot;}</code>, <code class="lang-kotlin">{88, &quot;Ожидание команды продолжения печати&quot;}</code>, <code class="lang-kotlin">{89, &quot;Документ открыт другим оператором&quot;}</code>, <code class="lang-kotlin">{91, &quot;Переполнение диапазона надбавок&quot;}</code>, <code class="lang-kotlin">{92, &quot;Понижено напряжение 24В&quot;}</code>, <code class="lang-kotlin">{93, &quot;Таблица не определена&quot;}</code>, <code class="lang-kotlin">{94, &quot;Некорректная операция&quot;}</code>, <code class="lang-kotlin">{95, &quot;Отрицательный итог чека&quot;}</code>, <code class="lang-kotlin">{96, &quot;Переполнение при умножении&quot;}</code>, <code class="lang-kotlin">{97, &quot;Переполнение диапазона цены&quot;}</code>, <code class="lang-kotlin">{98, &quot;Переполнение диапазона количества&quot;}</code>, <code class="lang-kotlin">{99, &quot;Переполнение диапазона отдела&quot;}</code>, <code class="lang-kotlin">{101, &quot;Не хватает денег в секции&quot;}</code>, <code class="lang-kotlin">{102, &quot;Переполнение денег в секции&quot;}</code>, <code class="lang-kotlin">{104, &quot;Не хватает денег по обороту налогов&quot;}</code>, <code class="lang-kotlin">{105, &quot;Переполнение денег по обороту налогов&quot;}</code>, <code class="lang-kotlin">{106, &quot;Ошибка питания в момент ответа по I2C&quot;}</code>, <code class="lang-kotlin">{107, &quot;Нет чековой ленты&quot;}</code>, <code class="lang-kotlin">{109, &quot;Не хватает денег по налогу&quot;}</code>, <code class="lang-kotlin">{110, &quot;Переполнение денег по налогу&quot;}</code>, <code class="lang-kotlin">{111, &quot;Переполнение по выплате в смене&quot;}</code>, <code class="lang-kotlin">{113, &quot;Ошибка отрезчика&quot;}</code>, <code class="lang-kotlin">{114, &quot;Команда не поддерживается в данном подрежиме&quot;}</code>, <code class="lang-kotlin">{115, &quot;Команда не поддерживается в данном режиме&quot;}</code>, <code class="lang-kotlin">{116, &quot;Ошибка ОЗУ&quot;}</code>, <code class="lang-kotlin">{117, &quot;Ошибка питания&quot;}</code>, <code class="lang-kotlin">{119, &quot;Ошибка принтера: нет сигнала с датчиков&quot;}</code>, <code class="lang-kotlin">{120, &quot;Замена ПО&quot;}</code>, <code class="lang-kotlin">{121, &quot;Ошибка часов&quot;}</code>, <code class="lang-kotlin">{122, &quot;Поле не редактируется&quot;}</code>, <code class="lang-kotlin">{123, &quot;Ошибка оборудования&quot;}</code>, <code class="lang-kotlin">{124, &quot;Не совпадает дата&quot;}</code>, <code class="lang-kotlin">{125, &quot;Неверный формат даты&quot;}</code>, <code class="lang-kotlin">{126, &quot;Неверное значение в поле длины&quot;}</code>, <code class="lang-kotlin">{127, &quot;Переполнение диапазона итога чека&quot;}</code>, <code class="lang-kotlin">{132, &quot;Переполнение наличности&quot;}</code>, <code class="lang-kotlin">{133, &quot;Переполнение по продажам в смене&quot;}</code>, <code class="lang-kotlin">{134, &quot;Переполнение по покупкам в смене&quot;}</code>, <code class="lang-kotlin">{135, &quot;Переполнение по возвратам продаж в смене&quot;}</code>, <code class="lang-kotlin">{136, &quot;Переполнение по возвратам покупок в смене&quot;}</code>, <code class="lang-kotlin">{137, &quot;Переполнение по внесению в смене&quot;}</code>, <code class="lang-kotlin">{138, &quot;Переполнение по надбавкам в чеке&quot;}</code>, <code class="lang-kotlin">{139, &quot;Переполнение по скидкам в чеке&quot;}</code>, <code class="lang-kotlin">{140, &quot;Отрицательный итог надбавки в чеке&quot;}</code>, <code class="lang-kotlin">{141, &quot;Отрицательный итог скидки в чеке&quot;}</code>, <code class="lang-kotlin">{142, &quot;Нулевой итог чека&quot;}</code>, <code class="lang-kotlin">{144, &quot;Поле превышает размер, установленный в настройках&quot;}</code>, <code class="lang-kotlin">{145, &quot;Выход за границу поля печати при данных настройках шрифта&quot;}</code>, <code class="lang-kotlin">{146, &quot;Наложение полей&quot;}</code>, <code class="lang-kotlin">{147, &quot;Восстановление ОЗУ прошло успешно&quot;}</code>, <code class="lang-kotlin">{148, &quot;Исчерпан лимит операций в чеке&quot;}</code>, <code class="lang-kotlin">{192, &quot;Контроль даты и времени (подтвердите дату и время)&quot;}</code>, <code class="lang-kotlin">{194, &quot;Превышение напряжения в блоке питания&quot;}</code>, <code class="lang-kotlin">{196, &quot;Несовпадение номеров смен&quot;}</code>, <code class="lang-kotlin">{199, &quot;Поле не редактируется в данном режиме&quot;}</code>, <code class="lang-kotlin">{200, &quot;Нет связи с принтером или отсутствуют импульсы от таходатчика&quot;}</code></p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-1587710320%2FConstructors%2F1757799368" anchor-label="AqsiJposException" id="-1587710320%2FConstructors%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-aqsi-jpos-exception.html"><span>Aqsi</span><wbr></wbr><span>Jpos</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1587710320%2FConstructors%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-aqsi-jpos-exception.html"><span class="token function">AqsiJposException</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="282858770%2FFunctions%2F1757799368" anchor-label="addSuppressed" id="282858770%2FFunctions%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#282858770%2FFunctions%2F1757799368"><span>add</span><wbr></wbr><span><span>Suppressed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="282858770%2FFunctions%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#282858770%2FFunctions%2F1757799368"><span class="token function">addSuppressed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1102069925%2FFunctions%2F1757799368" anchor-label="fillInStackTrace" id="-1102069925%2FFunctions%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#-1102069925%2FFunctions%2F1757799368"><span>fill</span><wbr></wbr><span>In</span><wbr></wbr><span>Stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1102069925%2FFunctions%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#-1102069925%2FFunctions%2F1757799368"><span class="token function">fillInStackTrace</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1043865560%2FFunctions%2F1757799368" anchor-label="getLocalizedMessage" id="1043865560%2FFunctions%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#1043865560%2FFunctions%2F1757799368"><span>get</span><wbr></wbr><span>Localized</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1043865560%2FFunctions%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#1043865560%2FFunctions%2F1757799368"><span class="token function">getLocalizedMessage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2050903719%2FFunctions%2F1757799368" anchor-label="getStackTrace" id="2050903719%2FFunctions%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#2050903719%2FFunctions%2F1757799368"><span>get</span><wbr></wbr><span>Stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2050903719%2FFunctions%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#2050903719%2FFunctions%2F1757799368"><span class="token function">getStackTrace</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/StackTraceElement.html">StackTraceElement</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="672492560%2FFunctions%2F1757799368" anchor-label="getSuppressed" id="672492560%2FFunctions%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#672492560%2FFunctions%2F1757799368"><span>get</span><wbr></wbr><span><span>Suppressed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="672492560%2FFunctions%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#672492560%2FFunctions%2F1757799368"><span class="token function">getSuppressed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-418225042%2FFunctions%2F1757799368" anchor-label="initCause" id="-418225042%2FFunctions%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#-418225042%2FFunctions%2F1757799368"><span>init</span><wbr></wbr><span><span>Cause</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-418225042%2FFunctions%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#-418225042%2FFunctions%2F1757799368"><span class="token function">initCause</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-762248569%2FFunctions%2F1757799368" anchor-label="printStackTrace" id="-762248569%2FFunctions%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#-1769529168%2FFunctions%2F1757799368"><span>print</span><wbr></wbr><span>Stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-762248569%2FFunctions%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#-1769529168%2FFunctions%2F1757799368"><span class="token function">printStackTrace</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#1841853697%2FFunctions%2F1757799368"><span class="token function">printStackTrace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/PrintStream.html">PrintStream</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#1175535278%2FFunctions%2F1757799368"><span class="token function">printStackTrace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/PrintWriter.html">PrintWriter</a></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2135801318%2FFunctions%2F1757799368" anchor-label="setStackTrace" id="2135801318%2FFunctions%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#2135801318%2FFunctions%2F1757799368"><span>set</span><wbr></wbr><span>Stack</span><wbr></wbr><span><span>Trace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2135801318%2FFunctions%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-unknown-printer-exception/index.html#2135801318%2FFunctions%2F1757799368"><span class="token function">setStackTrace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/StackTraceElement.html">StackTraceElement</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-654012527%2FProperties%2F1757799368" anchor-label="cause" id="-654012527%2FProperties%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#-654012527%2FProperties%2F1757799368"><span><span>cause</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-654012527%2FProperties%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><a data-name="-654012527%2FProperties%2F1757799368" anchor-label="cause" id="-654012527%2FProperties%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-unknown-printer-exception/index.html#-654012527%2FProperties%2F1757799368">cause</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1824300659%2FProperties%2F1757799368" anchor-label="message" id="1824300659%2FProperties%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a>
+        <div class="table-row" data-filterable-current=":commons:dokkaHtml/release" data-filterable-set=":commons:dokkaHtml/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-unknown-printer-exception/index.html#1824300659%2FProperties%2F1757799368"><span><span>message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1824300659%2FProperties%2F1757799368"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":commons:dokkaHtml/release"><a data-name="1824300659%2FProperties%2F1757799368" anchor-label="message" id="1824300659%2FProperties%2F1757799368" data-filterable-set=":commons:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-unknown-printer-exception/index.html#1824300659%2FProperties%2F1757799368">message</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Консультации по использованию библиотеки <b>api@aqsi.ru</b></span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
